@@ -2,6 +2,7 @@
     <div>
       <h2>To-Do List</h2>
       <input v-model="newTodo" @keyup.enter="addTodo" placeholder="Add new task" />
+      <button onclick="addTodo">Add</button>
       <ul>
         <li v-for="todo in todos" :key="todo.id">
           <input type="checkbox" v-model="todo.completed" @change="updateTodo(todo)" />
